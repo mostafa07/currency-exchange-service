@@ -19,7 +19,7 @@ public class CurrencyExchangeController {
 
 
     @GetMapping("/currency-exchange/from/{from}/to/{to}")
-    public CurrencyExchangeResponse retrieveCurrencyExchangeRate(@PathVariable() String from,
+    public CurrencyExchangeResponse retrieveCurrencyExchangeRate(@PathVariable String from,
                                                                  @PathVariable String to) {
         final CurrencyExchangeResponse currencyExchangeResponse = currencyExchangeRepository.findByFromAndTo(from, to);
         if (null == currencyExchangeResponse) {
