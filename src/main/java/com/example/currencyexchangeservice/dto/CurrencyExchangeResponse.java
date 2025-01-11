@@ -1,11 +1,19 @@
 package com.example.currencyexchangeservice.dto;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
 import java.math.BigDecimal;
 
+@Entity(name = "currency_exchange")
 public class CurrencyExchangeResponse {
 
+    @Id
     private Long id;
+    @Column(name = "currency_from")
     private String from;
+    @Column(name = "currency_to")
     private String to;
     private BigDecimal rate;
     private String environment;
